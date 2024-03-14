@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #131334;
+  color: white;
+}
+
+.container {
+  max-width: 768px;
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.calendar {
+  background-color: #0c0b1d;
+  color: #e8e7f4;
+  border-radius: 8px;
+  border: 8px solid #0c0b1d;
+}
+
+.day {
+  width: 14%;
+  display: inline-block;
+  margin-right: -2px;
+  min-height: 105px;
+  text-align: center;
+  padding-block: 2.5rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.day.selected {
+  border-color: #7a408a;
+}
+h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.currentDay {
+  font-weight: 800;
+  color: #7a408a;
+}
