@@ -12,7 +12,7 @@ body {
 .container {
   max-width: 768px;
   margin-inline: auto;
-  margin-top: 5rem;
+  margin-block: 5rem;
 }
 
 h1 {
@@ -26,17 +26,24 @@ h1 {
   color: #e8e7f4;
   border-radius: 8px;
   border: 8px solid #0c0b1d;
+  margin-bottom: 2rem;
 }
 
 .day {
   width: 14%;
   display: inline-block;
-  margin-right: -2px;
+  /* margin-right: -2px; */
   min-height: 105px;
   text-align: center;
   padding-block: 2.5rem;
   border: 1px solid transparent;
   border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.day:hover {
+  background-color: hsl(243, 45%, 12%);
 }
 
 .day.selected {
@@ -50,5 +57,87 @@ h3 {
 
 .currentDay {
   font-weight: 800;
+  color: #7a408a;
+}
+
+#addMeeting div {
+  display: inline-block;
+  margin-right: 46px;
+  vertical-align: bottom;
+}
+
+form {
+  display: inline-block;
+}
+
+input {
+  width: 130px;
+  min-height: 36px;
+  background-color: #0c0b1d;
+  color: #ebebeb;
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+input:focus {
+  background-color: #2d2a59;
+}
+
+input::placeholder {
+  color: #ebebeb;
+}
+
+input:focus::placeholder {
+  color: #615d9c;
+}
+
+#newMeetingDay {
+  display: inline-block;
+  min-height: 40px;
+}
+
+#newMeetingDay.hasDay {
+  font-size: 28px;
+  background-color: #0c0b1d;
+  border-radius: 3px;
+  color: #ebebeb;
+  padding: 0px 6px;
+}
+
+#newMeetingTime::-webkit-calendar-picker-indicator {
+  background-color: #7a408a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#newMeetingName {
+  width: 205px;
+}
+
+form button {
+  cursor: pointer;
+  background-color: #7a408a;
+  color: #efd7f5;
+  border: none;
+  width: 130px;
+  min-height: 36px;
+  font-weight: 700;
+}
+
+#appointments {
+  display: none;
+}
+
+#appointmentsList {
+  padding-inline-start: 16px;
+}
+
+#appointmentsList li {
+  min-height: 30px;
+}
+
+#appointmentsList li::marker {
   color: #7a408a;
 }
